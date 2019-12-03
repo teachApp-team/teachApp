@@ -2,21 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.contents{
+    padding: 30px;
+    background: #eee;
+}
+
 .date-of-examination {
-    padding-top: 30px;
-    background: gray;
+    
+    background: white;
     width: 100%;
-    height: 200px;
+    height: 400px;
     text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-of-examination-text {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: normal;
 }
 
 .home-total-ave {
-    height: 300px;
-    background: skyblue;
+    height: 600px;
+    background: white;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-total-ave-circle {
-    background: white;
+    background: #ccc;
     width: 300px;
     height: 300px;
     margin: 0 auto;
@@ -35,15 +55,15 @@
 }
 
 .home-total-ranking {
-    height: 300px;
-    background: tomato;
-}
-
-.home-total-ranking {
+    height: 600px;
+    background: white;
+    margin-bottom: 30px;
     padding: 30px;
+
 }
 
 .home-ob-episode {
-    height: 300px;
-    background: green;
+    height: 600px;
+    background: white;
+    margin-bottom: 30px;
 }
