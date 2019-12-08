@@ -1,0 +1,24 @@
+<%= form_for @episode do |f| %>
+<div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+</div>
+
+<div class="form-group">
+    <%= f.label :contents %>
+    <%= f.text_area :contents, class: "form-control" %>
+</div>
+
+<div class="form-group">
+    <%= f.label :auther %>
+    <%= f.text_field :auther, class: "form-control" %>
+</div>
+
+<div class="form-group">
+    <%= f.submit "送信", class: "btn btn-primary" %>
+</div>
+
+
+
+
+<% end %>
