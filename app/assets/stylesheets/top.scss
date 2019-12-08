@@ -66,4 +66,14 @@
     height: 600px;
     background: white;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-ob-episode > a {
+    font-size: 230px;
+    letter-spacing: 60px;
+    text-decoration: none;
+    color: black;
 }

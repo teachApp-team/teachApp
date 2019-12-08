@@ -3,5 +3,6 @@
   <p class="lead"><%= @episode.contents %></p>
   <hr class="my-4">
   <p><%= @episode.auther %></p>
-  
+  <%= link_to "削除", "/episodes/#{@episode.id}", method: "delete", class: "btn btn-light ml-5" %>
+  <%= link_to "編集", "/episodes/#{@episode.id}/edit",  class: "btn btn-light ml-5" %>
 </div>

@@ -18,8 +18,27 @@ class EpisodesController < ApplicationController
     else
       redirect_to :new_episode
     end
-    
   end
+
+  def edit
+    @episode = Episode.find_by(id: params[:id])
+  end
+
+  def update
+    @episode = Episode.find_by(id: params[:id])
+    if @episode.update_attributes(episode_params)
+      redirect_to "/episodes/#{@episode.id}"
+    else
+      redirect_to :edit_episode
+    end
+  end
+    
+  
+  def destroy
+    @episode = Episode.find_by(id: params[:id])
+    @episode.destroy
+    redirect_to "/"
+  end 
   
   private
   def episode_params
