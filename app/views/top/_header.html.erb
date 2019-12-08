@@ -1,7 +1,10 @@
 <header>
     <nav class="navbar navbar-light bg-dark">
           <span class="navbar-brand mb-0 h1 text-light"><%= link_to "Navbar", "/" %></span>
-          <button type="button" class="navbar-brand btn btn-outline-warning text-light ml-auto">Teacher</button>
+          <% if teacher_signed_in? %>
+              <%= link_to "ログアウト", "/teachers/sign_out", method: "delete", class: "btn btn-outline-danger ml-5" %>
+          <% end %>
+          <button type="button" class="navbar-brand btn btn-outline-warning text-light">Teacher</button>
           <button type="button" class="navbar-brand btn btn-outline-primary text-light">Student</button>
     </nav>
 
