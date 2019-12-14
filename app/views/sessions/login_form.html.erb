@@ -1,0 +1,16 @@
+<h2>生徒　ログインフォーム</h2>
+<%= form_for :session, method: "post", url: stu_login_path do |f| %>
+
+    <div class="form-group">
+        <%= f.label :name , "名前" %>
+        <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.label :password , "パスワード"  %>
+        <%= f.password_field :password, class: "form-control" %>
+    </div>
+    
+    <%= f.submit "ログイン", class: "btn btn-dark" %>
+
+
+<% end %>

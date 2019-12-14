@@ -9,7 +9,8 @@
 
 .date-of-examination {
     
-    background: white;
+    background-image: url(top_center_exam.jpg);
+    background-size: cover;
     width: 100%;
     height: 400px;
     text-align: center;
@@ -24,11 +25,12 @@
     font-style: normal;
     font-weight: 600;
     letter-spacing: normal;
+    color: white;
 }
 
 .home-total-ave {
     height: 600px;
-    background: white;
+    background: rgba(30, 30, 30, 0.8);
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
@@ -56,7 +58,7 @@
 
 .home-total-ranking {
     height: 600px;
-    background: white;
+    background: rgba(30, 30, 30, 0.8);
     margin-bottom: 30px;
     padding: 30px;
 
@@ -64,7 +66,9 @@
 
 .home-ob-episode {
     height: 600px;
-    background: white;
+    background-image: url(episode_bg.jpg);
+    background-size: cover;
+    background-position: center;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
@@ -72,8 +76,37 @@
 }
 
 .home-ob-episode > a {
-    font-size: 230px;
-    letter-spacing: 60px;
+    font-size: 50px;
     text-decoration: none;
     color: black;
+    transition: .4s;
+}
+
+.episode_link_text {
+    font-size: 60px;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+
+.episode_link_text:hover,
+.home-ob-episode {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+.bg-cover {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
 }
