@@ -1,2 +1,15 @@
-<h1>Students#show</h1>
-<p>Find me in app/views/students/show.html.erb</p>
+<h1 class="mt-5">生徒詳細画面</h1>
+<h1>生徒名：<%= @student.name %></h1>
+<h1>先生：<%= @student.teacher.name %></h1>
+<h1>ID：<%= @student.id %></h1>
+
+<%= form_for(@score, method: "post",  url: scores_create_path) do |f| %>
+    
+    <div class="form-group">
+        <%= f.label :score, "点数" %>
+        <%= f.number_field :score, class: "form-control" %>
+    </div>
+    
+    
+    <%= f.submit "スコア追加", class: "btn btn-outline-primary" %>
+<% end %>

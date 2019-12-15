@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191214085857) do
+ActiveRecord::Schema.define(version: 20191215110142) do
 
   create_table "episodes", force: :cascade do |t|
     t.string "title"
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(version: 20191214085857) do
     t.string "auther"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "scores", force: :cascade do |t|
+    t.integer "score", null: false
+    t.integer "student_id"
+    t.integer "test_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["student_id"], name: "index_scores_on_student_id"
+    t.index ["test_id"], name: "index_scores_on_test_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -40,6 +50,21 @@ ActiveRecord::Schema.define(version: 20191214085857) do
     t.string "name"
     t.index ["email"], name: "index_teachers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_teachers_on_reset_password_token", unique: true
+  end
+
+  create_table "test_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "test_type_id"
+    t.date "test_date", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["test_type_id"], name: "index_tests_on_test_type_id"
   end
 
 end

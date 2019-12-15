@@ -1,6 +1,6 @@
 class TeachersAccountsController < ApplicationController
   def show
-    @teacher = Teacher.find_by(name: "Fujita")
+    @students = Student.where(teacher_id: current_teacher.id)
   end
 
   def new

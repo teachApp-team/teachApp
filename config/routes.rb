@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   
+  post 'scores/create', to: 'scores#create'
+  
+
+  get 'scores/create'
+
+  get 'scores/destroy'
+
   get 'stu_login', to: 'sessions#login_form'
 
   post 'stu_login', to: 'sessions#create'
@@ -14,9 +21,11 @@ Rails.application.routes.draw do
 
   post 'episodes/create'
   
+  resources :tests
   resources :teachers_accounts
   resources :episodes
-  resources :students, only: [:new ,:create]
+  resources :scores
+  resources :students, only: [:new ,:create, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 

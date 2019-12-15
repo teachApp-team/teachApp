@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+TestType.create([
+        {name: "英文法テスト"},
+        {name: "標準英単語テスト"},
+        {name: "発展英単語テスト"},
+        {name: "基礎英単語テスト"}
+    ])

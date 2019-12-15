@@ -1,5 +1,6 @@
 class Student < ApplicationRecord
   belongs_to :teacher
+  has_many :scores
   has_secure_password
   
   validates :name, 

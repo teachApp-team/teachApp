@@ -1,4 +1,4 @@
-<h2>生徒　ログインフォーム</h2>
+<h2 class="mt-5">生徒　ログインフォーム</h2>
 <%= form_for :session, method: "post", url: stu_login_path do |f| %>
 
     <div class="form-group">
@@ -14,3 +14,5 @@
 
 
 <% end %>
+
+<%= link_to "新規登録をする", new_student_path, class: "btn btn-outline-dark mt-4" %>

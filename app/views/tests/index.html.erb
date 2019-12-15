@@ -1,0 +1,6 @@
+<h1 class="mt-5">テスト一覧ページ</h1>
+<%= link_to "テスト追加", new_test_path, class: "btn btn-primary" %>
+
+<% @tests.each do |t| %>
+    <h2 class="bg-dark my-3"><%= link_to "#{ t.name }   #{ t.test_type.name }  #{ t.test_date }", test_path(t.id) %></h2>
+<% end %>

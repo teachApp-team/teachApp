@@ -2,6 +2,7 @@
     <nav class="navbar navbar-light bg-dark">
           <span class="navbar-brand mb-0 h1 text-light"><%= link_to "Navbar", "/" %></span>
           <% if teacher_signed_in? %>
+              <%= link_to current_teacher.name, teachers_account_path(current_teacher.id), class: "btn btn-success ml-auto" %>
               <%= link_to "ログアウト", "/teachers/sign_out", method: "delete", class: "btn btn-outline-danger ml-auto" %>
           <% end %>
           <% if @current_student %>

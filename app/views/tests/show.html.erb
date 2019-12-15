@@ -1,0 +1,21 @@
+<h1 class="mt-5"><%= @test.name %></h1>
+<h2><%= @test.test_type.name %></h2>
+<h2><%= @test.test_date %></h2>
+<h2 style="margin-bottom: 100px;">平均点：<%= @ave_score %>点</h2>
+
+<%= render @test.scores %>
+
+<%= form_for(@score, method: "post",  url: scores_create_path) do |f| %>
+    <div class="form-group">
+        <%= f.label :student_id, "生徒" %>
+        <%= f.collection_select(:student_id, @students, :id, :name, {}, class: "form-control") %>
+    </div>
+    <div class="form-group">
+        <%= f.label :score, "点数" %>
+        <%= f.number_field :score, class: "form-control" %>
+    </div>
+    
+    <%= f.hidden_field :test_id, value: @test.id %>
+    
+    <%= f.submit "スコア追加", class: "btn btn-outline-primary" %>
+<% end %>

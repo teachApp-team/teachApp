@@ -1,0 +1,18 @@
+<h1 class="mt-5">テスト新規作成</h1>
+
+<%= form_for(@test) do |f| %>
+    <div class="form-group">
+        <%= f.label :name, "テスト名" %>
+        <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.label :test_type_id, "テスト種類" %>
+        <%= f.collection_select(:test_type_id, @types, :id, :name, {},  class: "form-control") %>
+    </div>
+    <div class="form-group">
+        <%= f.label :test_date, "テスト日時" %>
+        <%= f.date_select :test_date, class: "form-control" %>
+    </div>
+    
+    <%= f.submit "追加する", class: "btn btn-dark" %>
+<% end %>

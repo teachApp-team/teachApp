@@ -1,2 +1,12 @@
-<h1><%= @teacher.name %></h1>
+<h1 class="mt-5"><%= current_teacher.name %></h1>
 <p>Find me in app/views/teachers/show.html.erb</p>
+
+<%= link_to "テスト一覧", tests_path, class: "btn btn-dark"  %>
+
+<% @students.each do |s| %>
+    <h2>
+        生徒名：<%= s.name %>
+        <%= link_to "詳細ページへ", student_path(s.id) %>
+    </h2>
+
+<% end %>
