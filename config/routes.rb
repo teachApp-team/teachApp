@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'charts/index'
+
   post 'scores/create', to: 'scores#create'
   
 

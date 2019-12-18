@@ -3,6 +3,11 @@
 <h1>先生：<%= @student.teacher.name %></h1>
 <h1>ID：<%= @student.id %></h1>
 
+
+<% @uniq_test_scores.each do |key, val| %>
+    <p>テストIDが<%= key %>のスコアは<%= val %>です</p>
+<% end %>
+
 <%= form_for(@score, method: "post",  url: scores_create_path) do |f| %>
     
     <div class="form-group">
@@ -13,3 +18,9 @@
     
     <%= f.submit "スコア追加", class: "btn btn-outline-primary" %>
 <% end %>
+
+<h1><%= @uniq_test_scores[1] %></h1>
+<h1><%= @n %></h1>
+
+<canvas id="myChart" width="400" height="200"></canvas> 
+<script>draw_graph();</script> 

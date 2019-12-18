@@ -17,8 +17,26 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find_by(id: params[:id])
-    @score = @student.scores.new
     @types = Test
+    @uniq_test_scores = {}
+    @temp_scores = []
+    TestType.all.each do |type|
+      @student.scores.each do |score|
+        if type.id == score.test.test_type_id
+          @temp_scores.push(score.score)
+        end
+      end
+     
+      @uniq_test_scores[type.id] = @temp_scores
+      @temp_scores = []
+    end
+    @score = @student.scores.new
+    gon.data = []
+    @n = 0
+    @uniq_test_scores[1].each do |score|
+      gon.data.push(score)
+      @n = @n + 1
+    end
   end
   
   private
