@@ -1,7 +1,9 @@
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+body {
+  position: relative;
+}
 .contents{
     padding: 30px;
     background: #eee;
@@ -27,15 +29,31 @@
     letter-spacing: normal;
     color: white;
 }
+.ave-and-ranking{
+    background-image: url(top_ranking.jpg);
+    background-size: cover;
+}
+
+.ave-type-name{
+    font-size: 80px;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background: white;
+}
 
 .home-total-ave {
     height: 600px;
-    background-image: url(top_socore.jpg);
     background-size: cover;
     margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.home-total-ranking {
+    height: 300px;
+    background-size: cover;
+    margin-bottom: 30px;
+    padding: 30px;
+
 }
 
 .home-total-ave-circle {
@@ -48,6 +66,12 @@
     justify-content: center;
     align-items: center;
     color: white;
+    transition: 0.1s;
+}
+
+
+.hide-area {
+    display: none;
 }
 
 .home-total-ave-circle > p {
@@ -58,14 +82,7 @@
     font-size: 20px;
 }
 
-.home-total-ranking {
-    height: 600px;
-    background-image: url(top_ranking.jpg);
-    background-size: cover;
-    margin-bottom: 30px;
-    padding: 30px;
 
-}
 
 .home-ob-episode {
     height: 600px;
