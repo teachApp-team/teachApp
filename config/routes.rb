@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  
+
+#   変更点は反映されておりますでしょうか  
   get 'charts/index'
 
   post 'scores/create', to: 'scores#create'
