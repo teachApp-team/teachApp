@@ -1,17 +1,19 @@
 <header>
-    <nav class="navbar navbar-light bg-dark">
-          <span class="navbar-brand mb-0 h1 text-light"><%= link_to "Navbar", "/" %></span>
-          <% if teacher_signed_in? %>
-              <%= link_to current_teacher.name, teachers_account_path(current_teacher.id), class: "btn btn-success ml-auto" %>
-              <%= link_to "ログアウト", "/teachers/sign_out", method: "delete", class: "btn btn-outline-danger ml-auto" %>
-          <% end %>
-          <% if @current_student %>
-              <%= link_to @current_student.name, "students/show/#{@current_student.id}", class: "btn btn-success ml-auto" %>
-              <%= link_to "ログアウト", stu_logout_path, method: "delete", class: "btn btn-danger ml-5" %>
-          <% end %>
-          
-          <%= link_to "Teacher", new_teacher_session_path, class: "btn btn-warning ml-auto" %>
-          <%= link_to "Student", stu_login_path, class: "btn btn-primary ml-3" %>
+    <nav class="navbar">
+        <div class="container">
+              <span class="logo-text mb-0 text-light"><a href="/">Teach<span>App</span></a></span>
+              <% if teacher_signed_in? %>
+                  <%= link_to current_teacher.name, teachers_account_path(current_teacher.id), class: "nav-item nib ml-auto" %>
+                  <%= link_to "ログアウト", "/teachers/sign_out", method: "delete", class: "nav-item" %>
+              <% end %>
+              <% if @current_student %>
+                  <%= link_to @current_student.name, "students/show/#{@current_student.id}", class: "nav-item nib ml-auto" %>
+                  <%= link_to "ログアウト", stu_logout_path, method: "delete", class: "nav-item" %>
+              <% end %>
+              <% unless @current_student || teacher_signed_in? %>
+                  <%= link_to "Teacher", new_teacher_session_path, class: "nav-item nib ml-auto" %>
+                  <%= link_to "Student", stu_login_path, class: "nav-item" %>
+              <% end %>
+        </div>
     </nav>
-
 </header>

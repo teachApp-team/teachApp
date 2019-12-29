@@ -1,12 +1,15 @@
 body {
-  position: relative; }
+  position: relative; 
+  background: #fff;
+}
 
 .contents {
   padding: 30px;
-  background: #eee; }
+  background: #fff; }
 
 .date-of-examination {
-  background-image: url(top_center_exam.jpg);
+  /*background-image: url(top_center_exam.jpg);*/
+  background: orange;
   background-size: cover;
   width: 100%;
   height: 400px;
@@ -14,7 +17,9 @@ body {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center; 
+  box-shadow: 0 0 20px black;
+}
 
 .date-of-examination-text {
   font-size: 48px;
@@ -22,14 +27,20 @@ body {
   font-weight: 600;
   letter-spacing: normal;
   color: white; }
+  
+.date-of-examination-text > span {
+  font-size: 100px;
+  text-shadow: 3px 3px black;
+}
 
 .ave-and-ranking {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  box-shadow: 0 0 20px black;
   
-  
-  background-image: url(top_ranking.jpg);
+  /*background-image: url(top_ranking.jpg);*/
+  background: orange;
   background-size: cover; }
 
 .ave-type-name {
@@ -44,12 +55,15 @@ body {
   height: 500px;
   background-size: cover;
   margin-bottom: 30px;
-  padding: 30px; }
+  padding: 30px; 
+  
+}
 
 
 .home-ob-episode {
   margin-top: 30px;
   height: 600px;
+  box-shadow: 0 0 20px black;
   background-image: url(episode_bg.jpg);
   background-size: cover;
   background-position: center;
@@ -76,13 +90,13 @@ body {
   color: white;
   border: none; }
 
-.bg-cover {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+/*.bg-cover {*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  background: rgba(0, 0, 0, 0.4);*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center; }*/
 
 header {
   position: fixed;
@@ -94,6 +108,7 @@ header {
   margin: 20px auto;
   font-size: 40px;
   border-radius: 20px;
+  box-shadow: 0 0 20px black;
 }
 
 .rank-row{
@@ -110,7 +125,6 @@ header {
 /*# sourceMappingURL=top.css.map */
 
 .home-total-ave-circle {
-    background: black;
     width: 300px;
     height: 300px;
     margin: 0 auto;
@@ -118,8 +132,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #101010;
     transition: 0.1s;
+    box-shadow: 0 0 20px black;
 }
 
 
@@ -134,4 +149,5 @@ header {
 .home-total-ave-circle > span {
     font-size: 20px;
 }
+
 
