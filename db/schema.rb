@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191215110142) do
+ActiveRecord::Schema.define(version: 20191214165418) do
 
   create_table "episodes", force: :cascade do |t|
     t.string "title"
@@ -32,10 +32,12 @@ ActiveRecord::Schema.define(version: 20191215110142) do
 
   create_table "students", force: :cascade do |t|
     t.integer "teacher_id"
-    t.string "name"
-    t.string "password_digest"
+    t.string "name", null: false
+    t.string "password_digest", null: false
+    t.string "university"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_students_on_name", unique: true
     t.index ["teacher_id"], name: "index_students_on_teacher_id"
   end
 

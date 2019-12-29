@@ -33,7 +33,8 @@ class TopController < ApplicationController
       val.each do |score|
         @total = @total + score
       end
-      @ave_score = @total / val.length
+      @ave_score = 1 if @total == 0 || val.length == 0
+      @ave_score = @total / val.length if @ave_score != 1
       @type_ave_scores[i] = @ave_score
       @total = 0
       @ave_score = 0

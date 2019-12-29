@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   post 'stu_login', to: 'sessions#create'
   delete 'stu_logout', to: 'sessions#destroy'
 
-  get 'stu_mypage', to: 'students#show'
+  get 'students/show(/:id)', to: 'students#show'
 
   devise_for :teachers
   root 'top#home'

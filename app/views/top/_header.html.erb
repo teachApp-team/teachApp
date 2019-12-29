@@ -6,7 +6,7 @@
               <%= link_to "ログアウト", "/teachers/sign_out", method: "delete", class: "btn btn-outline-danger ml-auto" %>
           <% end %>
           <% if @current_student %>
-              <%= link_to @current_student.name, stu_mypage_path, class: "btn btn-success ml-auto" %>
+              <%= link_to @current_student.name, "students/show/#{@current_student.id}", class: "btn btn-success ml-auto" %>
               <%= link_to "ログアウト", stu_logout_path, method: "delete", class: "btn btn-danger ml-5" %>
           <% end %>
           

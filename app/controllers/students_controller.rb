@@ -20,6 +20,9 @@ class StudentsController < ApplicationController
     @types = Test
     @uniq_test_scores = {}
     @temp_scores = []
+    
+    
+    
     TestType.all.each do |type|
       @student.scores.each do |score|
         if type.id == score.test.test_type_id
