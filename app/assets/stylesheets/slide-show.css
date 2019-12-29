@@ -3,25 +3,31 @@
 }
 .test-type-list {
   display: inline-block;
+  font-family: 'arial black';
   width: 200px;
-  height: 30px;
+  height: 50px;
   padding: 10px 10px 5px;
   cursor: pointer;
-  background-color: #111111;
+  background-color: #777;
   border-top-right-radius: 10px;
-  font-size: 14px;
+  font-size: 20px;
   color: #fff;
   text-align: center;
 }
 .active-type{
-  background-color: #fff;
+  background-color: orange;
+  font-weight: bold;
   color:#110000;
 }
 .test-type-name {
-    background-color: rgba(200, 200, 200, 0.8);
     width: 500px;
-    margin: 0 auto;
+    font-size: 50px;
+    font-family: 'Impact';
+    font-weight: 900;
+    margin: 20px auto;
     text-align: center;
+    color: white;
+    text-shadow: 4px 4px black;
 }
 
 
@@ -42,15 +48,13 @@
 }
 
 .home-total-ave-circle {
-  background: black;
+  background: white;
   top: -280px;
   left: 600px;
+  display: flex;
+  flex-direction: column;
 }
 
-.home-total-ave-circlehover {
-  background: gray;
-  transform: rotate(360deg);
-  }
 
 
 
