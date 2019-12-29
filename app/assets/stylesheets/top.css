@@ -4,33 +4,48 @@ body {
 }
 
 .contents {
-  padding: 30px;
+  padding: 0;
   background: #fff; }
 
 .date-of-examination {
-  /*background-image: url(top_center_exam.jpg);*/
-  background: orange;
+  background-image: url(center-date-bg.jpg);
+  /*background: orange;*/
   background-size: cover;
+  background-position: center;
   width: 100%;
-  height: 400px;
+  height: 750px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; 
-  box-shadow: 0 0 20px black;
+  /*box-shadow: 0 0 20px black;*/
 }
 
 .date-of-examination-text {
-  font-size: 48px;
+  font-size: 50px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: normal;
   color: white; }
   
 .date-of-examination-text > span {
   font-size: 100px;
-  text-shadow: 3px 3px black;
+  text-shadow: 6px 6px black;
+}
+
+.text-div-line {
+  height: 10px;
+  width: 400px;
+  border-bottom: 3px solid white;
+  margin-bottom: 30px;
+}
+
+.date-of-examination-under-text {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .ave-and-ranking {
@@ -39,8 +54,9 @@ body {
   flex-wrap: wrap;
   box-shadow: 0 0 20px black;
   
-  /*background-image: url(top_ranking.jpg);*/
-  background: orange;
+  background-image: url(ranking-white-bg.jpg);
+  background-position: center;
+  /*background: orange;*/
   background-size: cover; }
 
 .ave-type-name {
@@ -56,7 +72,6 @@ body {
   background-size: cover;
   margin-bottom: 30px;
   padding: 30px; 
-  
 }
 
 
