@@ -1,0 +1,19 @@
+<h1>Students#me</h1>
+
+<h1>生徒名：<%= @student.name %></h1>
+<h1>先生名：<%= @student.teacher.name %></h1>
+<h1>志望大学：<%= @student.university %></h1>
+
+
+<% @uniq_types_scores.each do |i, scores| %>
+    <p>テスト種類IDが<%= i %>のスコアは<%= scores %>です</p>
+<% end %>
+
+<section>
+  <canvas id="myChart" width="400" height="200"></canvas> 
+  <script>draw_graph();</script> 
+</section>
+<section>
+  <canvas id="myChartSecond" width="400" height="200"></canvas> 
+  <script>draw_graph_second();</script> 
+</section>
