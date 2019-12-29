@@ -1,0 +1,67 @@
+.episode_link_text {
+    font-weight: bold;
+}
+.test-type-list {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  padding: 10px 10px 5px;
+  cursor: pointer;
+  background-color: #111111;
+  border-top-right-radius: 10px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+.active-type{
+  background-color: #fff;
+  color:#110000;
+}
+.test-type-name {
+    background-color: rgba(200, 200, 200, 0.8);
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+.home-total-ave {
+  height: 600px;
+  background-size: cover;
+  margin-bottom: 30px; }
+.home-ave-box{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    position:  relative;
+}
+
+.home-circle-wrapper{
+    position: relative;
+}
+
+.home-total-ave-circle {
+  background: black;
+  top: -280px;
+  left: 600px;
+}
+
+.home-total-ave-circlehover {
+  background: gray;
+  transform: rotate(360deg);
+  }
+
+
+
+.hide-area {
+  display: none; }
+
+.home-total-ave-circle > p {
+  font-size: 80px; }
+
+.home-total-ave-circle > span {
+  font-size: 20px; }
+
+
+

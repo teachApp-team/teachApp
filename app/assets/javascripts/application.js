@@ -18,12 +18,16 @@
 //= require_tree .
 
 $(function(){
+    
     $(".home-total-ave-circle").addClass("hide-area");
     $(".home-total-ave-circle").eq(0).removeClass("hide-area");
+    
     $(".rank-table").addClass("hide-area");
     $(".rank-table").eq(0).removeClass("hide-area");
+    
     $(".test-type-name").addClass("hide-area");
     $(".test-type-name").eq(0).removeClass("hide-area");
+    
     
     $(".test-type-list").click(function(){
         var listIndex = $(".test-type-list").index($(this));

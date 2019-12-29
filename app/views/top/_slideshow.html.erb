@@ -1,0 +1,49 @@
+<div class="ave-type-name-list">
+          <span class="test-type-list type-list-1 active-type" id="test-type-list-1" >英文法テスト</span>
+          <span class="test-type-list type-list-2" id="test-type-list-2" >発展英単語テスト</span>
+          <span class="test-type-list type-list-3" id="test-type-list-3" >標準英単語テスト</span>
+          <span class="test-type-list type-list-4" id="test-type-list-4" >基礎英単語テスト</span>
+</div>
+
+<div class="ave-and-ranking">
+ <h1 class="test-type-name">英文法テスト</h1>
+ <h1 class="test-type-name">発展英単語テスト</h1>
+ <h1 class="test-type-name">標準英単語テスト</h1>
+ <h1 class="test-type-name">基礎英単語テスト</h1>
+ 
+  </section>
+    <div class="home-ave-box">
+      
+      
+      <div class="home-circle-wrapper">
+          <div class="home-total-ave-circle type-list-1">
+              <p>1:<%= @type_ave_scores[1] %></p>
+              <span>点</span>
+          </div>
+          
+          <div class="home-total-ave-circle type-list-2">
+              <p>2:<%= @type_ave_scores[2] %></p>
+              <span>点</span>
+          </div>
+          
+          <div class="home-total-ave-circle type-list-3">
+              <p>3:<%= @type_ave_scores[3] %></p>
+              <span>点</span>
+          </div>
+          
+          <div class="home-total-ave-circle type-list-4">
+              <p>4:<%= @type_ave_scores[4] %></p>
+              <span>点</span>
+          </div>
+          
+      </div>
+    </div>
+    
+ 
+  
+  <%= render "rank_table" %>
+</div>
+
+
+
+

@@ -1,0 +1,19 @@
+<div class="calendar-wrapper">
+    <h2 class="calendar-title">2019/12</h2>
+    <div class="calendar-date">
+        <div class="calendar-day">月</div>
+        <div class="calendar-day">火</div>
+        <div class="calendar-day">水</div>
+        <div class="calendar-day">木</div>
+        <div class="calendar-day">金</div>
+        <div class="calendar-day">土</div>
+        <div class="calendar-day">日</div>
+        <% get_start_day.times do  %>
+            <div class="calendar-num"></div>
+        <% end %>
+
+        <% get_all_month_day.times do |i|  %>
+            <div class="calendar-num"><%= i + 1 %></div>
+        <% end %>
+    </div>
+</div>
