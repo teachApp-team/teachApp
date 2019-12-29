@@ -1,0 +1,21 @@
+<div class="rank_ave_wrapper">
+    <% @all_scores.each do |type_id, hash| %>
+        <div class="item_by_type">
+            <div class="rank-type-title"><%= @test_type_names[type_id - 1] %></div>
+            <div class="home-ave-wrapper">
+                <span class="text">平均点 : 
+                    <span class="home-ave-score"><%= hash[:ave_score] %></span>
+                    点
+                </span>
+            </div>
+            <div class="ranking-wrapper">
+              <% hash[:ranking].each_with_index do |score, i| %>
+                  <% if i >= 3 %>
+                      <% break %>
+                  <% end %>
+                  <p><%= i + 1 %>位: <span class="home-ave-score"><%= score %></span> 点</p>
+              <% end %>
+            </div>
+        </div>
+    <% end %>
+</div>
