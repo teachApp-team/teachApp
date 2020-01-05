@@ -1,0 +1,70 @@
+<div class="mypage-wrapper">
+    <h1 class="mypage-title"><%= @student.name %> 's mypage</h1>
+    <div class="container">
+        <% @test_types.each do |t| %>
+            <div class="type-name-tag"><%= t.name %></div>
+        <% end %>
+    </div>
+    
+    <div class="container list-container">
+        <% @test_types.each do |type| %>
+            <div class="test-list-wrapper">
+                <h1><%= type.name %></h1>
+                <div class="test-card-wrapper">
+                    <% @test_cards[type.id].each do |card| %>
+                        <div class="test-card" id="card">
+                            <h2 class="test-card-title"><%= card[:date] %></h2>
+                            <div class="test-card-score-wrapper">
+                                <div class="test-card-score">
+                                    <span><%= card[:score] %></span>点
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+    
+    <%= render 'shared/calendar' %>
+</div>
+
+<script>
+    (()=>{
+        // var cards = document.getElementsByClassName('test-card');
+        // for(var i = 0; i < cards.length; i++){
+        //     cards[i].style.display = "none";
+        // }
+        
+        // var list_wrappers = document.getElementsByClassName('test-list-wrapper');
+        // var btn = document.getElementById('btn');
+        // for(var i = 0; i < list_wrappers.length; i++){
+        //     list_wrappers[i].classList.add('hide-wrapper');
+        // }
+        // btn.addEventListener("click", ()=>{
+        // for(var i = 0; i < list_wrappers.length; i++){
+        //     list_wrappers[i].classList.remove('hide-wrapper');
+        // }            
+        // });
+        
+        $(".test-list-wrapper").addClass("hide-wrapper");
+        $(".test-list-wrapper").eq(0).removeClass("hide-wrapper");
+
+    $(".type-name-tag").click(function(){
+        var listIndex = $(".type-name-tag").index($(this));
+        $(".test-list-wrapper").addClass("hide-wrapper");
+        $(".test-list-wrapper").eq(listIndex).toggleClass("hide-wrapper");
+        
+        // $(".rank-table").addClass("hide-area");
+        // $(".test-type-name").addClass("hide-area");
+        // // listIndex = listIndex + 1
+        // console.log(listIndex);
+        // $(".rank-table").eq(listIndex).toggleClass("hide-area");
+        // $(".test-type-name").eq(listIndex).toggleClass("hide-area");
+        
+        // $(".test-type-list").removeClass("active-type");
+        // $(this).addClass("active-type");
+        // $("type-list-1").removeClass("hide-area");
+    });
+    })();
+</script>
