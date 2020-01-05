@@ -4,8 +4,20 @@ body {
 }
 
 .contents {
-  padding: 0;
+  padding: 70px 0 0 0;
+  height: 100%;
   background: #fff; }
+  
+.notice {
+  position: relative;
+  z-index: -1;
+  width: 600px;
+  padding: 10px;
+  margin: 70px auto;
+  margin-bottom: 0;
+  border: 5px solid skyblue;
+  font-size: 34px;
+}
 
 .date-of-examination {
   background-image: url(center-date-bg.jpg);
@@ -53,9 +65,9 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   box-shadow: 0 0 20px black;
-  
   background-image: url(ranking-white-bg.jpg);
   background-position: center;
+  /*margin: 20px 30px 20px 20px;*/
   /*background: orange;*/
   background-size: cover; }
 
@@ -73,7 +85,10 @@ body {
   margin-bottom: 30px;
   padding: 30px; 
 }
-
+a.home-ob-episode:hover {
+  text-decoration: none;
+  color: white;
+}
 
 .home-ob-episode {
   margin-top: 30px;
@@ -82,16 +97,61 @@ body {
   background-image: url(episode_bg.jpg);
   background-size: cover;
   background-position: center;
-  margin-bottom: 30px;
+  margin: 20px;
   display: flex;
   justify-content: center;
-  align-items: center; }
-
-.home-ob-episode > a {
-  font-size: 50px;
+  flex-direction: column;
   text-decoration: none;
-  color: black;
-  transition: .4s; }
+  align-items: center; }
+  
+.episode-bg-cover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.6s;
+}
+.home-ob-episode:hover 
+.episode-bg-cover
+{
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.box-in-episode {
+  width: 70px;
+  height: 70px;
+  background: orange;
+  transition: .6s;
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.home-ob-episode:hover
+.box-in-episode {
+  transform: scale(1.2)  rotate(360deg);
+}
+.home-ob-episode:hover
+.box-in-episode-icon {
+  border-radius: 10px;
+}
+
+.box-in-episode-icon {
+  background: white;
+  width: 20px;
+  height: 20px;
+  transition: .6s;
+}
+
+.title-of-episode {
+  font-size: 50px;
+  margin-bottom: 30px;
+  font-family: 'Georgia';
+  text-shadow: 6px 6px black;
+}
 
 .episode_link_text {
   font-size: 60px;
@@ -105,6 +165,21 @@ body {
   color: white;
   border: none; }
 
+.home-ob-episode:hover
+.title-of-episode
+.sub-title-of-episode
+.message-of-episode {
+  color: white;
+  text-decoration: none;
+}
+
+.message-of-episode {
+  font-size: 20px;
+  font-family: 'Tunga';
+  text-shadow: 3px 3px gray;
+  margin-bottom: 30px;
+}
+
 /*.bg-cover {*/
 /*  width: 100%;*/
 /*  height: 100%;*/
@@ -113,10 +188,6 @@ body {
 /*  justify-content: center;*/
 /*  align-items: center; }*/
 
-header {
-  position: fixed;
-  z-index: 10;
-  width: 100vw; }
 
 .rank-table {
   background: white;

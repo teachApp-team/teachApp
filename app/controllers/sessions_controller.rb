@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     student = Student.find_by(name: params[:session][:name])
     if student && student.authenticate(params[:session][:password])
       session[:stu_id] = student.id
-      redirect_to "students/show/#{student.id}"
+      redirect_to "/mypage/#{student.id}"
     else
       redirect_to stu_login_path
     end

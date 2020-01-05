@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   delete 'stu_logout', to: 'sessions#destroy'
 
   get 'students/show(/:id)', to: 'students#show'
+  
+  get 'mypage/:id', to: 'students#mypage'
 
   devise_for :teachers
   root 'top#home'
