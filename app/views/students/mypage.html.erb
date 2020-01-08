@@ -2,7 +2,7 @@
     <h1 class="mypage-title"><%= @student.name %> 's mypage</h1>
     <div class="container">
         <% @test_types.each do |t| %>
-            <div class="type-name-tag"><%= t.name %></div>
+            <div class="type-name-tag active-type-name-tag"><%= t.name %></div>
         <% end %>
     </div>
     
@@ -52,8 +52,13 @@
 
     $(".type-name-tag").click(function(){
         var listIndex = $(".type-name-tag").index($(this));
+        
+        $(".type-name-tag").removeClass("active-type-name-tag");
+        $(this).addClass("active-type-name-tag");
+        
         $(".test-list-wrapper").addClass("hide-wrapper");
         $(".test-list-wrapper").eq(listIndex).toggleClass("hide-wrapper");
+        
         
         // $(".rank-table").addClass("hide-area");
         // $(".test-type-name").addClass("hide-area");

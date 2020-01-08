@@ -19,6 +19,13 @@ header .navbar {
     font-size: 20px;
 }
 
+.header-student-name {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: auto;
+    
+}
+
 .logo-text {
     font-size: 25px;
     font-family: 'arial black';

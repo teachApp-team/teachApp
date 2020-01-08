@@ -1,12 +1,15 @@
 <header>
     <nav class="navbar">
         <div class="container">
+              
               <span class="logo-text mb-0 text-light"><a href="/">Teach<span>App</span></a></span>
+              
               <% if teacher_signed_in? %>
                   <%= link_to "#{current_teacher.name}先生", teachers_account_path(current_teacher.id), class: "nav-item nib ml-auto" %>
                   <%= link_to "ログアウト", "/teachers/sign_out", method: "delete", class: "nav-item" %>
               <% end %>
               <% if @current_student %>
+                  <div class="header-student-name">Hello! <%= @current_student.name %></div>
                   <%= link_to @current_student.name, "/mypage/#{@current_student.id}", class: "nav-item nib ml-auto" %>
                   <%= link_to "ログアウト", stu_logout_path, method: "delete", class: "nav-item" %>
               <% end %>
