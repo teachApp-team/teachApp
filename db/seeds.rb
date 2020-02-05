@@ -13,32 +13,34 @@
 #         {name: "基礎英単語テスト"}
 #     ])
 
-# Score.create([
-#         {score: 90, student_id: 1, test_id: 1 },
-#         {score: 80, student_id: 1, test_id: 1 },
-#         {score: 65, student_id: 1, test_id: 2 },
-#         {score: 85, student_id: 1, test_id: 2 },
-#         {score: 45, student_id: 1, test_id: 3 },
-#         {score: 75, student_id: 1, test_id: 3 },
-#         {score: 70, student_id: 1, test_id: 4 },
-#         {score: 64, student_id: 1, test_id: 4 },
-#         {score: 54, student_id: 1, test_id: 5 },
-#         {score: 65, student_id: 1, test_id: 5 },
-#         {score: 65, student_id: 1, test_id: 6 },
-#         {score: 86, student_id: 1, test_id: 6 },
-#         {score: 65, student_id: 1, test_id: 7 },
-#         {score: 68, student_id: 1, test_id: 7 },
-#         {score: 89, student_id: 1, test_id: 8 },
-#         {score: 65, student_id: 1, test_id: 8 },
-#         {score: 78, student_id: 1, test_id: 9 },
-#         {score: 86, student_id: 1, test_id: 9 },
-#         ])
+Score.create([
+        {score: 90, student_id: 1, test_id: 151 },
+        {score: 80, student_id: 1, test_id: 151 },
+        {score: 65, student_id: 1, test_id: 151 },
+        {score: 85, student_id: 1, test_id: 151 },
+        {score: 45, student_id: 1, test_id: 151 },
+        {score: 75, student_id: 1, test_id: 151 },
+        {score: 70, student_id: 1, test_id: 151 },
+        {score: 64, student_id: 1, test_id: 151 },
+        {score: 54, student_id: 1, test_id: 151 },
+        {score: 65, student_id: 1, test_id: 151 },
+        {score: 65, student_id: 1, test_id: 151 },
+        {score: 86, student_id: 1, test_id: 151 },
+        {score: 65, student_id: 1, test_id: 151 },
+        {score: 68, student_id: 1, test_id: 151 },
+        {score: 89, student_id: 1, test_id: 151 },
+        {score: 65, student_id: 1, test_id: 151 },
+        {score: 78, student_id: 1, test_id: 151 },
+        {score: 86, student_id: 1, test_id: 151 },
+        ])
 
-# types = [1,2,3,4]
+# types = [25,26,27,28]
+
+# Student.create(name: "halhal", password: "password", password_confirmation: "password", teacher_id: 1)
 
 # 30.times do |i|
 #     Test.create(
-#         name: "#{i+1}回目のテストです", test_type_id: types[i % 4], test_date: "2020-01-#{i+1}" 
+#         name: "#{i+1}回目のテストです", test_type_id: types[(i % 4) + 25], test_date: "2020-01-#{i+1}" 
 #     )
 # end
 
@@ -50,8 +52,8 @@
 #     )
 # end
 
-(10..20).each do |i|
-    Message.create({
-        title: "title #{i}", detail: "#{i}日までの宿題です", date: "2020/02/#{i}", student_id: 1
-    })
-end
+# (10..20).each do |i|
+#     Message.create({
+#         title: "title #{i}", detail: "#{i}日までの宿題です", date: "2020/02/#{i}", student_id: 1
+#     })
+# end
