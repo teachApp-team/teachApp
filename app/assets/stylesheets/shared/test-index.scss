@@ -1,0 +1,87 @@
+.all-tests-wrapper {
+    width: 80%;
+    padding: 20px;
+    box-shadow: 0 0 20px gray;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    background: #FFC7AF;
+}
+
+.all-tests-wrapper > .indexTestCard {
+    width: 80%;
+    height: 100px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px gray;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.indexTestCard > .name {
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #444;
+}
+
+.indexTestCard > .status {
+    width: 180px;
+    height: 100%;
+    border-right: 1px solid #777;
+    color: #777;
+}
+
+.indexTestCard > .status p.date {
+    background: #686868;
+    color: #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+}
+
+.indexTestCard > .action {
+    width: 120px;
+    height: 100%;
+    border-right: 1px solid #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #777;
+    transition: .4s;
+}
+
+.indexTestCard > .action > i {
+    font-size: 20px;
+}
+
+.indexTestCard > .action:hover {
+    background: #676767;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
