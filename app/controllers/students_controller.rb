@@ -26,19 +26,21 @@ class StudentsController < ApplicationController
     TestType.all.each do |type|
       @student.scores.each do |score|
         if type.id == score.test.test_type_id
-          @temp_scores.push(score.score)
+          @temp_scores.push(score)
         end
       end
      
-      @uniq_test_scores[type.id] = @temp_scores
+      @uniq_test_scores[type] = @temp_scores
       @temp_scores = []
     end
     @score = @student.scores.new
     gon.data = []
     @n = 0
+    if @uniq_test_scores[1].present?
     @uniq_test_scores[1].each do |score|
       gon.data.push(score)
       @n = @n + 1
+    end
     end
   end
   
