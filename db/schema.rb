@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20200202025052) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string "title"
-    t.text "detail"
+    t.string "title", null: false
+    t.text "detail", null: false
     t.date "date"
     t.integer "student_id"
     t.datetime "created_at", null: false
