@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   def new
     @message = Message.new
+    @students = Student.where(teacher_id: current_teacher.id)
   end
   
   def create
