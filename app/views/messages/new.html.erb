@@ -39,7 +39,7 @@
 
 <div>
     <% @students.each do |student| %>
-        <%= render 'shared/calendar', messages: student.messages %>
+        <%= render partial:  "shared/calendar", locals: { messages: student.messages } %>
     <% end %>
     
 </div>

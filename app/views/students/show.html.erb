@@ -65,7 +65,7 @@
 
 
 
-<%= render "shared/calendar" %>
+<%= render partial:  "shared/calendar", locals: { messages: @messages } %>
 
 <h1><%= @uniq_test_scores[1] %></h1>
 <h1><%= @n %></h1>
