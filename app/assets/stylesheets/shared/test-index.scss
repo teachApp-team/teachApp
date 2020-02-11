@@ -1,6 +1,26 @@
+.test-list-index{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.test-list-index h1{
+    border-bottom: solid 3px #ffc778;
+    position: relative;
+}
+.test-list-index h1:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #D2691E;
+  bottom: -3px;
+  width: 50%;
+}
+
+
+
+
 .all-tests-wrapper {
     width: 80%;
-    padding: 20px;
+    padding: 20px 15%;
     box-shadow: 0 0 20px gray;
     display: flex;
     justify-content: flex-start;
@@ -69,19 +89,25 @@
     cursor: pointer;
 }
 
+.new-test-bottom {
+    margin: 80px 120px;
+    background: #BDB76B;
+    padding: 30px 100px;
+    box-shadow: 0 0 20px gray;
+    align-items: center;
+    position: relative;
+}
+
+.new-test-bottom h1{
+    font-family: 'ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+}
+
+.new-test-bottom p{
+    font-size: 20px;
+    text-align: center;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.new-test-btn{
+    text-align: center;
+}

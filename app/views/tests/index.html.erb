@@ -1,5 +1,6 @@
-<h1 class="mt-5">テスト一覧ページ</h1>
-<%= link_to "テスト追加", new_test_path, class: "btn btn-primary" %>
+
+<div class="test-list-index"><h1 class="mt-5">テスト一覧ページ</h1><p>生徒やテストごとに得点の記入またはテストの作成をすることができます。</p></div>
+
 
 <div class="all-tests-wrapper">
     <% @tests.each do |t| %>
@@ -56,4 +57,11 @@
     <% end %>
 </div>
 
+<div class="new-test-bottom">
+  <h1>新しくテストを追加</h1>
+  <p>新しくテストを作成した場合は登録した後点数を入力してください</p>
+  <div class="new-test-btn">
+      <%= link_to "テスト追加", new_test_path, class: "btn btn-dark" %>
+  </div>
+</div>
 

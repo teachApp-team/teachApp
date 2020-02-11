@@ -1,6 +1,10 @@
 <div class="mypage-wrapper">
+    <p class="mt-5 message_to_teacher" >ようこそ!　 <span><%= @current_student.name %></span>　 さん</p>
+
     <div class="score-wrapper">
-        <h2><span class="ave-line1"></span> Everything is practice <span class="ave-line1"></span></h2>
+        <h2><span class="ave-line1"></span> Everything is practice <span class="ave-line1"></span>
+        <p>今までの<%= @current_student.name %>さんのテストの得点です。<br>自分の成績を確認してホームページの平均点やランキングと比較してみよう。</p>
+        </h2>
         <div class="container">
             <% @test_types.each_with_index do |t, index| %>
                 <% if index==0 %>
