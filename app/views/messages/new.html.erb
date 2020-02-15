@@ -37,9 +37,13 @@
     <% end %>
 </div>
 
-<div>
+<div class="each_student_list_title">
+    <h3>担当生徒のカレンダー</h1>
+    <p>あなたの担当している生徒のカレンダー全てを見ることができます</p>
     <% @students.each do |student| %>
-        <%= render partial:  "shared/calendar", locals: { messages: student.messages } %>
+        <div class="each_student_list">
+            <h1><%= student.name %>さんのカレンダー</h1>
+            <%= render partial:  "shared/calendar", locals: { messages: student.messages } %>
+        </div>    
     <% end %>
-    
 </div>
