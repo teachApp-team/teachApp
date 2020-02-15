@@ -35,8 +35,10 @@
             <% end %>
         </div>
     </div>
-    
-    <%= render partial:  "shared/calendar", locals: { messages: @messages } %>
+    <div>
+        <%= render partial:  "shared/calendar", locals: { messages: @current_student.messages } %>        
+    </div>
+
 </div>
 
 <script>

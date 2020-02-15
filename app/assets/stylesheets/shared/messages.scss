@@ -49,3 +49,31 @@
     text-align: center;
     padding: 0px 30px;
 }
+
+
+
+.each_student_list_title h3{
+    margin-top: 150px;
+    text-align: center;
+    border-bottom: solid 3px #ffc778;
+    bottom: -5px;
+    content: " ";
+    display: block;
+}
+
+.each_student_list_title > p {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.each_student_list {
+    background: #FFEFD5;
+    padding: 10px;
+    margin: 70px 6% 10px 6%;
+}
+
+.each_student_list h1{
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+}
