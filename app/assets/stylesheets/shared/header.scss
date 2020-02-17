@@ -49,7 +49,6 @@ header .navbar {
 .nav-item {
     color: #101010;
     padding: 0 30px;
-    line-height: 70px;
     border-right: 1px solid orange;
     transition: .4s;
 }
@@ -59,4 +58,57 @@ header .navbar {
     background: orange;
 }
 
+div.btn-nav-item {
+    margin-left: 50%;
+}
+
+.btn-nav-item > button.btn {
+     background: white;
+     color: black;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     padding-left: 30px;
+     padding-right: 30px;
+     font-family: 'HiraKakuProN-W6';
+     font-size: 22px;
+     border-color: white;
+     border-right: 1px solid orange;
+     border-left: 1px solid orange;
+     transition: .4s;
+     outline: none;
+}
+
+
+.btn-nav-item > button.btn:hover {
+    background: #FFA500;
+    border-radius: 25px;
+}
+
 .nib { border-left: 1px solid orange}
+
+
+
+.fade {
+    padding: 100px;
+}
+
+//.form-group {
+    // text-align: center;
+//}
+
+ .fade > h1 {
+    text-align: center;
+}
+
+.modal-header {
+    background: #FFD700;
+}
+
+.modal-title {
+    margin-left: 35%;
+    font-family: 'Osaka';
+}
+
+.modal-body {
+    background: #FFD700;
+}
