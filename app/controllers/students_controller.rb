@@ -21,6 +21,7 @@ class StudentsController < ApplicationController
     @uniq_test_scores = {}
     @temp_scores = []
     @messages = Message.where(student_id: params[:id])
+    @newMsg = Message.new(student_id: params[:id])
     
     
     TestType.all.each do |type|
@@ -35,12 +36,19 @@ class StudentsController < ApplicationController
     end
     @score = @student.scores.new
     gon.data = []
+    gon.first = []
+    gon.second = []
+    gon.three = []
+    gon.four
+    gon.dates = []
     @n = 0
-    if @uniq_test_scores[1].present?
-    @uniq_test_scores[1].each do |score|
-      gon.data.push(score)
-      @n = @n + 1
-    end
+    @session_score = @uniq_test_scores[TestType.first]
+    if @uniq_test_scores.present?
+      @uniq_test_scores[TestType.first].each do |score|
+        gon.first.push(score.score)
+        gon.dates.push(score.test.test_date)
+        @n = @n + 1
+      end
     end
   end
   
@@ -73,6 +81,5 @@ class StudentsController < ApplicationController
   def student_params
     params.require(:student).permit(:name,:teacher_id, :password, :password_confirmation)
   end
-   
   
 end
