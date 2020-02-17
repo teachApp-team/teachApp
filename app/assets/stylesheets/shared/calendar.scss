@@ -66,7 +66,7 @@
     transition: .3s;
 }
 
-.calendar-num:hover {
+.calendar-num.presentNum:hover {
     background: #ccc;
     cursor: pointer;
 }

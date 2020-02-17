@@ -65,11 +65,10 @@
 
 
 
-<%= render partial: "shared/calendar", locals: {messages: @student.messages} %> 
+<%= render partial: "shared/calendar", locals: { messages: @student.messages } %> 
 
-<h1><%= @uniq_test_scores[1] %></h1>
-<h1><%= @n %></h1>
-
-<canvas id="myChart" width="400" height="200"></canvas> 
-<script>draw_graph();</script> 
+<div class="chart-wrapper">
+  <canvas id="myChart" width="400" height="200"></canvas> 
+  <script>draw_graph();</script> 
+</div>
 
