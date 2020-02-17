@@ -1,7 +1,15 @@
-<% @all_episodes.each do |epi| %>
-    <%= link_to epi.title, "/episodes/#{epi.id}" %>
-    <br/>
-    <hr/>
-<% end %>
 
+<div>
+    <div class="episode_title">
+        <h2>OB・OGの合格体験記</h2>
+    </div>
+        
+    
+    <% @all_episodes.each do |epi| %>
+        <%= link_to epi.title, "/episodes/#{epi.id}" %>
+        <br/>
+        <hr/>
+    <% end %>
+    
 
+</div>
