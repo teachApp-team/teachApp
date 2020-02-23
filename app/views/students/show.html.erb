@@ -11,6 +11,7 @@
 
 <div class="student-test-scores-wrapper">
     <% @uniq_test_scores.each do |key, val| %>
+        <% if val.present? %>
         <div class="student-test-scores-card">
             <div class="name"><%= key.name %></div>
             <div class="scores-wrapper">
@@ -24,6 +25,7 @@
               <% end %>
             </div>
         </div>
+        <% end %>
     <% end %>
 </div>
 
@@ -67,8 +69,8 @@
 
 <%= render partial: "shared/calendar", locals: { messages: @student.messages } %> 
 
-<div class="chart-wrapper">
-  <canvas id="myChart" width="400" height="200"></canvas> 
-  <script>draw_graph();</script> 
-</div>
+<!--<div class="chart-wrapper">-->
+<!--  <canvas id="myChart" width="400" height="200"></canvas> -->
+<!--  <script>draw_graph();</script> -->
+<!--</div>-->
 

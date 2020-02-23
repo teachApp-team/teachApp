@@ -7,8 +7,8 @@ class StudentsController < ApplicationController
   def create
     @student= Student.new(student_params)
     if @student.save
-      redirect_to stu_mypage_path
       session[:stu_id] = @student.id
+      redirect_to "/mypage/#{@student.id}"
     else
       redirect_to new_student_path
     end
