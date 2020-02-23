@@ -6,8 +6,8 @@
     <h3>合格までの道のり</h3>
     <p class="lead"><%= @episode.contents %></p>
   </div>
-  <div>
-    <p><%= @episode.auther %></p>
+  <div class = "story-maker-name">
+    作成者: <span><%= @episode.auther %></span>
   </div>
   <div>
     <% if teacher_signed_in? %>
