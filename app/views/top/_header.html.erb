@@ -1,27 +1,40 @@
 <header>
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-sm">
         <div class="container">
               
-              <span class="logo-text mb-0 text-light"><a href="/">Teach<span>App:</span></a></span>
-              
-              <% if teacher_signed_in? %>
+            <span class="logo-text mb-0 text-light"><a href="/"><span class="logo-text-a">Teach </span>App</a></span>
+            
+            <input type="checkbox" id="check" style="display: none">
+            <label for="check" class="checkbtn"><i class="fas fa-align-justify header-menu-icon"></i></label>
+            
+            <ul class="header-items navbar-nav">
+              <% if @current_teacher %>
+                <li class="nav-item">
                   <%= link_to "#{current_teacher.name}先生", teachers_account_path(current_teacher.id), class: "nav-item nib ml-auto" %>
                   <%= link_to "ログアウト", "/teachers/sign_out", method: "delete", class: "nav-item" %>
-              <% end %>
-              <% if @current_student %>
+                </li>
+              <% elsif @current_student %>
+                <li class="nav-item">
                   <div class="header-student-name">Hello! <%= @current_student.name %></div>
                   <%= link_to @current_student.name, "/mypage/#{@current_student.id}", class: "nav-item nib ml-auto" %>
                   <%= link_to "ログアウト", stu_logout_path, method: "delete", class: "nav-item" %>
-              <% end %>
-              <% unless @current_student || teacher_signed_in? %>
+                </li>
+              <% else %>
                   <!-- Button trigger modal -->
-                  <div class="btn-nav-item ml-auto">
+                <li class="nav-item">
+                  <div class="btn-nav-item">
                     <button type="button" class="btn btn-primary outlineNone" onfocus="this.blur();" data-toggle="modal" data-target="#exampleModal-student">
-                      Student >>
+                      Student
                     </button>
                   </div>
-                  <%= link_to "Teacher >>", new_teacher_session_path, class: "nav-item nib ml-auto" %>
+                </li>
+                <li class="nav-item">
+                  <div class="btn-nav-item">
+                    <%= link_to "Teacher", new_teacher_session_path, class: "nav-item nib ml-auto teacher-nav" %>
+                  </div>
+                </li>
               <% end %>
+            </ul>
         </div>
     </nav>
 </header>

@@ -1,34 +1,40 @@
 header .navbar {
-    height: 70px;
+    height: 80px;
     margin: 0;
-    padding: 0;
+    padding: 0 70px;
     background: #fff;
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 5;
     width: 100%;
-}
-
-.navbar:hover {
     border-bottom: 1px solid orange;
 }
 
+.navbar:hover {
+    transition: .4s;
+    border-bottom: 2px solid orange;
+}
+
 .navbar > .container {
-    height: 70px;
+    // height: 80px;
     display: block;
     font-size: 20px;
 }
 
-.header-student-name {
-    font-size: 20px;
-    margin-top: 10px;
-    margin-right: auto;
-    
+.logo-text {
+    line-height: 70px;
+    padding: 0 20px;
+    font-family: 'Georgia';
+    font-weight: bold;
+    font-size: 27px;
+    color: black;
+    transition: .4s;
 }
 
-.logo-text {
-    font-size: 25px;
-    font-family: 'arial black';
+.logo-text-a {
+    color: #FF570D;
+    font-size: 32px;
+    letter-spacing: 1px;
 }
 
 .logo-text a{
@@ -37,6 +43,7 @@ header .navbar {
     line-height: 70px;
     padding: 0 20px;
     transition: .4s;
+    margin-bottom: 5px;
 }
 
 .logo-text a:hover {
@@ -46,16 +53,47 @@ header .navbar {
     border-radius: 25px;
 }
 
-.nav-item {
-    color: #101010;
-    padding: 0 30px;
-    border-right: 1px solid orange;
-    transition: .4s;
+
+.header-items {
+    list-style: none;
+    display: flex;
 }
 
-.nav-item:hover {
+.header-items > li {
+    margin-left: 50px;
+}
+
+.header-items > li > .btn-nav-item {
+    line-height: 70px;
+    display: inline-block;
+    margin: auto;
+    padding: 0 20px;
+    transition: .4s;
+    font-size: 20px;
+    font-family: 'Impact';
+    letter-spacing: 1px;    
+}
+
+.header-student-name {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: auto;
+}
+
+
+
+// .nav-item {
+//     color: #101010;
+//     padding: 0 30px;
+//     // border-right: 1px solid orange;
+//     transition: .4s;
+// }
+
+.btn-nav-item > button.btn:hover {
     color: white;
-    background: orange;
+    border-radius: 50%;
+    background: #FF570D;
+    height: 60px;
 }
 
 div.btn-nav-item {
@@ -69,23 +107,34 @@ div.btn-nav-item {
      padding-bottom: 5px;
      padding-left: 30px;
      padding-right: 30px;
-     font-family: 'HiraKakuProN-W6';
+     font-family: 'Georgia';
      font-size: 22px;
-     border-color: white;
-     border-right: 1px solid orange;
-     border-left: 1px solid orange;
+     border: none;
      transition: .4s;
      outline: none;
 }
 
-
-.btn-nav-item > button.btn:hover {
-    background: #FFA500;
-    border-radius: 25px;
+.btn-nav-item > .teacher-nav {
+     color: #101010;
+     padding: 0 30px;
+    //  background: white;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     padding-left: 30px;
+     padding-right: 30px;
+     font-family: 'Georgia';
+     font-size: 22px;
+     border: none;
+     transition: .4s;
+     outline: none;    
 }
 
-.nib { border-left: 1px solid orange}
-
+.btn-nav-item > .teacher-nav:hover {
+    color: white;
+    border-radius: 50%;
+    background: #FF570D;
+    height: 60px;
+}
 
 
 .fade {
@@ -111,4 +160,41 @@ div.btn-nav-item {
 
 .modal-body {
     background: #FFD700;
+}
+
+.header-menu-icon {
+    display: none;
+}
+
+
+@media (max-width: 1000px) {
+    .header-menu-icon {
+        display: block;
+        line-height: 70px;
+        font-size: 50px;
+        padding: 0 20px;
+    }
+    .header-items {
+        display: block;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        padding: none;
+        background: #D2691E;
+        transition: .5s;
+    }
+    
+    .header-items > li {
+        border-bottom: 1px solid white;
+        width: 100%;
+        margin: 0;
+        padding-left: 40px;
+    }
+    
+    #check:checked ~ .header-items {
+        display: block;
+        left: 0;
+    }
+    
 }
